@@ -35,21 +35,17 @@ router.post('/register', async (req, res) => {
 
 // Ruta para iniciar sesión
 router.post('/login', async (req, res) => {
-    const { username, password } = req.body; // Cambia email a username
+    const { username, password } = req.body;
 
     try {
         // Buscar el owner por username
         const owner = await Owner.findOne({ username });
-        console.log('Owner encontrado:', owner); // Agrega este log
-
         if (!owner) {
             return res.status(401).json({ message: 'Credenciales inválidas' });
         }
 
         // Verificar la contraseña
         const isPasswordValid = await bcrypt.compare(password, owner.password);
-        console.log('Contraseña válida:', isPasswordValid); // Agrega este log
-
         if (!isPasswordValid) {
             return res.status(401).json({ message: 'Credenciales inválidas' });
         }
@@ -59,8 +55,8 @@ router.post('/login', async (req, res) => {
 
         res.status(200).json({ message: 'Inicio de sesión exitoso', token });
     } catch (error) {
-        console.error('Error al iniciar sesión', error);
-        res.status(500).json({ message: 'Error al iniciar sesión', error });
+        console.error('Error al iniciar sesión', error); // Esto te mostrará el error
+        res.status(500).json({ message: 'Error al iniciar sesión', error: error.message || error }); // Proporciona más información en la respuesta
     }
 });
 

@@ -1,12 +1,9 @@
-// models/Swipe.js
 const mongoose = require('mongoose');
 
 const swipeSchema = new mongoose.Schema({
-    owner: { type: mongoose.Schema.Types.ObjectId, ref: 'Owner' }, // Referencia al dueño
-    pet: { type: mongoose.Schema.Types.ObjectId, ref: 'Pet' }, // Referencia a la mascota
-    direction: { type: String, enum: ['left', 'right'], required: true }, // izquierda o derecha
-    createdAt: { type: Date, default: Date.now }
+    ownerId: { type: mongoose.Schema.Types.ObjectId, ref: 'Owner', required: true },
+    petId: { type: mongoose.Schema.Types.ObjectId, ref: 'Pet', required: true },
+    direction: { type: String, enum: ['left', 'right'], required: true }, // Ejemplo: izquierda o derecha
 });
 
-const Swipe = mongoose.model('Swipe', swipeSchema);
-module.exports = Swipe;
+module.exports = mongoose.model('Swipe', swipeSchema);
