@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petinder - Encuentra la pareja perfecta para tu mascota</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Asegúrate de que la ruta sea correcta -->
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Petinder</h1>
+            <div class="login-container">
+                <form action="/owners/login" method="POST">
+                    <input type="text" placeholder="Usuario" name="username" required>
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                    <button type="submit" class="button">Iniciar sesión</button>
+                </form>
+                
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <div class="intro">
+                <h2>Conecta mascotas. Crea historias.</h2>
+                <p>En Petinder, ayudamos a los dueños de mascotas a encontrar la pareja perfecta para sus adorables amigos peludos. ¡Crea un perfil y empieza a descubrir nuevas amistades y aventuras para tu mascota!</p>
+            </div>
+            <div class="register-container">
+                <h3>Únete a Petinder hoy</h3>
+                <form action="/owners/register" method="POST">
+                    <input type="text" placeholder="Nombre completo" name="name" required>
+                    <input type="text" placeholder="Nombre de usuario" name="username" required> <!-- Agregar campo de nombre de usuario -->
+                    <input type="email" placeholder="Correo electrónico" name="email" required>
+                    <input type="password" placeholder="Contraseña" name="password" required>
+                    <input type="text" placeholder="Nombre de tu mascota" name="petName" required>
+                    <button type="submit" class="button">Crear cuenta nueva</button>
+                </form>
+                <p class="terms">Al hacer clic en "Crear cuenta nueva", aceptas nuestros <a href="#">Términos</a>, <a href="#">Política de privacidad</a> y <a href="#">Política de cookies</a>.</p>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Petinder. Todos los derechos reservados. | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #ff6f61; /* Color estilo Tinder */
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+}
+
+.login-container input {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.intro {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.register-container {
+    flex: 0.5;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-container h3 {
+    color: #ff6f61;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.register-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-container .button {
+    width: 100%;
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.register-container .button:hover {
+    background-color: #e65c52;
+}
+
+.terms {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 20px;
+}
+
+.terms a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+/* Estilos para el botón de inicio de sesión */
+/* Estilos para el botón de inicio de sesión */
+.login-container .button {
+    background-color: #ff6f61; /* Color estilo Tinder */
+    color: white;
+    padding: 10px;
+    border: 2px solid #ff6f61; /* Borde visible */
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Agregado para que el borde cambie de color */
+}
+
+.login-container .button:hover {
+    background-color: #e65c52; /* Color más oscuro en hover */
+    border-color: #e65c52; /* Cambiar el color del borde en hover */
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #ff6f61;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
